@@ -11,5 +11,9 @@ export default [
 	{
 		path: 'profile',
 		outlet: 'profile'
+	},
+	{
+		path: 'map?{id}',
+		outlet: 'map'
 	}
 ];

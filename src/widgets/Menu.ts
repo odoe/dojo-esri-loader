@@ -34,6 +34,16 @@ export default class Menu extends WidgetBase {
 					activeClasses: [css.selected]
 				},
 				['Profile']
+			),
+			w(
+				Link,
+				{
+					to: 'map',
+					classes: [css.link],
+					params: { id: 'f2e9b762544945f390ca4ac3671cfa72' },
+					activeClasses: [css.selected]
+				},
+				['Map']
 			)
 		]);
 	}

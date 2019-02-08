@@ -8,8 +8,12 @@ import '@dojo/themes/dojo/index.css';
 
 import routes from './routes';
 import App from './App';
+import MapContext from './contexts/MapContext';
 
 const registry = new Registry();
+registry.defineInjector('map-state', (invalidator) => {
+	return () => new MapContext(invalidator);
+});
 registerRouterInjector(routes, registry);
 registerThemeInjector(dojo, registry);
 
