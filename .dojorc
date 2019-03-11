@@ -13,7 +13,13 @@
 						"#map\/.*"
 					]
 				}
-			]
+			],
+			"puppeteerOptions": {
+				"args": [
+					"--no-sandbox",
+					"--disable-setuid-sandbox"
+				]
+			}
 		},
 		"pwa": {
 			"manifest": {
