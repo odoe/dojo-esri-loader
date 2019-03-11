@@ -18,4 +18,4 @@ registerRouterInjector(routes, registry);
 registerThemeInjector(dojo, registry);
 
 const r = renderer(() => w(App, {}));
-r.mount({ registry });
+r.mount({ domNode: document.getElementById('root') as HTMLElement, registry });

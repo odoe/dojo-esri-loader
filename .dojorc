@@ -1,5 +1,66 @@
 {
-	"build-app": {},
+	"build-app": {
+		"legacy": false,
+		"build-time-render": {
+			"root": "root",
+			"paths": [
+				"#home",
+				"#about",
+				"#profile",
+				{
+					"path": "#map",
+					"match": [
+						"#map\/.*"
+					]
+				}
+			]
+		},
+		"pwa": {
+			"manifest": {
+				"name": "dojo-esri-loader",
+				"short_name": "dojo-esri-loader",
+				"description": "dojo-esri-loader",
+				"background_color": "#ffffff",
+				"theme_color": "#56a5d8",
+				"icons": [
+					{
+						"src": "src/img/globe.png",
+						"sizes": [
+							128,
+							256,
+							512
+						]
+					}
+				]
+			},
+			"serviceWorker": {
+				"clientsClaim": true,
+				"routes": [
+					{
+						"urlPattern": "https://js.arcgis.com",
+						"strategy": "networkFirst",
+						"expiration": {
+							"maxEntries": 25
+						}
+					},
+					{
+						"urlPattern": "https://arcgis.com/sharing",
+						"strategy": "networkFirst",
+						"expiration": {
+							"maxEntries": 25
+						}
+					},
+					{
+						"urlPattern": "https://static.arcgis.com/",
+						"strategy": "networkFirst",
+						"expiration": {
+							"maxEntries": 25
+						}
+					}
+				]
+			}
+		}
+	},
 	"test-intern": {},
 	"create-app": {}
 }
