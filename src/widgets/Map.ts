@@ -19,7 +19,6 @@ export interface MapProperties {
 export default class Map extends WidgetBase<MapProperties> {
 	onAttach() {
 		const element = this.meta(HtmlMeta).get('elemRef') as HTMLElement;
-		console.log("my element", element, this.properties);
 		this.properties.initializeMap(element);
 }
 	protected render() {

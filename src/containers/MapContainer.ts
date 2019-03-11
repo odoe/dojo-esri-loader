@@ -5,17 +5,17 @@ import { Container } from "@dojo/framework/widget-core/Container";
 import MapContext from "../contexts/MapContext";
 import Map, { MapProperties } from "../widgets/Map";
 
-function getProperties(inject: MapContext, properties: MapProperties): MapProperties {
-  const { initializeMap, webmapid } = inject;
-  return { initializeMap: initializeMap.bind(inject), webmapid };
+function getProperties(context: MapContext, properties: MapProperties): MapProperties {
+  const { initializeMap } = context;
+  const { webmapid } = properties;
+  context.webmapid = webmapid;
+  return { initializeMap: initializeMap.bind(context), webmapid };
 }
 
 class MapContainer extends WidgetBase<MapProperties> {
   protected render() {
-    return w(Map, {
-      initializeMap: this.properties.initializeMap,
-      webmapid: this.properties.webmapid
-    });
+    const { initializeMap, webmapid } = this.properties;
+    return w(Map, { initializeMap, webmapid });
   }
 }
 

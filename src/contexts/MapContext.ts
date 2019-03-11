@@ -8,7 +8,7 @@ export default class MapContext {
 		this._invalidator = invalidator;
 	}
 
-  webmapid = 'f2e9b762544945f390ca4ac3671cfa72';
+  webmapid = '';
 
   initializeMap = (container: HTMLElement) => {
     loadCss('https://js.arcgis.com/4.10/esri/css/main.css');

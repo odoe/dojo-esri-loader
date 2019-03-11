@@ -23,7 +23,6 @@ export default class App extends WidgetBase {
 					key: 'map',
 					id: 'map',
 					renderer: ({ queryParams }: MatchDetails) => {
-						console.log(queryParams);
 						return w(MapContainer, { webmapid: queryParams.id });
 					}
 				})
