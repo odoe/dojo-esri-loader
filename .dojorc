@@ -5,8 +5,6 @@
 			"root": "root",
 			"paths": [
 				"#home",
-				"#about",
-				"#profile",
 				{
 					"path": "#map",
 					"match": [
@@ -66,7 +64,5 @@
 				]
 			}
 		}
-	},
-	"test-intern": {},
-	"create-app": {}
+	}
 }

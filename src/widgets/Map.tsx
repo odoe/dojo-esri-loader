@@ -1,8 +1,8 @@
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
 import MetaBase from '@dojo/framework/widget-core/meta/Base';
-import { v } from '@dojo/framework/widget-core/d';
+import { tsx } from '@dojo/framework/widget-core/tsx';
 
-import * as css from './styles/About.m.css';
+import * as css from './styles/Map.m.css';
 
 class HtmlMeta extends MetaBase {
 	get(key: string): Element {
@@ -22,6 +22,6 @@ export default class Map extends WidgetBase<MapProperties> {
 		this.properties.initializeMap(element);
 }
 	protected render() {
-		return v('div', { classes: [css.root], key: 'elemRef' }, []);
+		return <div classes={css.root} key='elemRef'></div>;
 	}
 }
