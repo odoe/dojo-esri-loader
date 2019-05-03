@@ -1,4 +1,6 @@
 import { loadCss, loadModules } from 'esri-loader';
+const VERSION = '4.11';
+const options = { url: `https://js.arcgis.com/${VERSION}` };
 
 
 export default class MapContext {
@@ -11,8 +13,8 @@ export default class MapContext {
   webmapid = '';
 
   initializeMap = async (container: HTMLElement) => {
-    loadCss('https://js.arcgis.com/4.10/esri/css/main.css');
-    const [MapView, WebMap] = await loadModules(['esri/views/MapView', 'esri/WebMap']);
+    loadCss(`https://js.arcgis.com/${VERSION}/esri/themes/dark/main.css`);
+    const [MapView, WebMap] = await loadModules(['esri/views/MapView', 'esri/WebMap'], options);
     // then we load a web map from an id
     const webmap = new WebMap({
       portalItem: {
