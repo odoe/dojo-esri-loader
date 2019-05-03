@@ -11,17 +11,17 @@
     "test:all": "dojo build --mode unit && dojo build --mode functional && dojo test --all --config local"
   },
   "dependencies": {
-    "@dojo/framework": "^5.0.0",
-    "@dojo/themes": "^5.0.0",
+    "@dojo/framework": "^5.0.4",
+    "@dojo/themes": "^5.0.1",
     "@dojo/widgets": "^5.0.0",
-    "esri-loader": "^2.6.0",
+    "esri-loader": "^2.9.2",
     "tslib": "~1.9.3"
   },
   "devDependencies": {
     "@dojo/cli": "^5.0.0",
-    "@dojo/cli-build-app": "^5.0.1",
+    "@dojo/cli-build-app": "^5.0.4",
     "@dojo/cli-test-intern": "^5.0.0",
-    "@types/node": "~9.6.5",
-    "typescript": "^3.2.4"
+    "@types/node": "~11.13.9",
+    "typescript": "^3.4.5"
   }
 }
